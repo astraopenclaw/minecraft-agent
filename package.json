@@ -1,21 +1,30 @@
 {
   "name": "minecraft-agent",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "OpenClaw skill for AI-controlled Minecraft bot. Play together with your AI assistant!",
   "main": "src/bot.js",
   "scripts": {
-    "start": "node src/bot.js",
-    "test": "echo \"Join a server first!\""
+    "start": "node -r dotenv/config src/bot.js",
+    "setup": "node setup.js",
+    "test": "echo \"Run npm run setup first!\""
   },
-  "keywords": ["minecraft", "mineflayer", "ai", "openclaw", "bot", "agent"],
+  "keywords": [
+    "minecraft",
+    "mineflayer",
+    "ai",
+    "openclaw",
+    "bot",
+    "agent"
+  ],
   "author": "Astra & David",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.6.1",
     "mineflayer": "^4.20.1",
+    "mineflayer-auto-eat": "^5.0.3",
+    "mineflayer-collectblock": "^1.4.1",
     "mineflayer-pathfinder": "^2.4.5",
     "mineflayer-pvp": "^1.3.2",
-    "mineflayer-collectblock": "^1.4.1",
-    "mineflayer-auto-eat": "^1.4.0",
     "vec3": "^0.1.10"
   }
 }

@@ -1,69 +1,52 @@
-# Minecraft Agent Skill
+# 🎮 Minecraft Agent Skill for OpenClaw
 
-**Play Minecraft together with your AI assistant!**
+Play Minecraft with your AI agent! This skill connects OpenClaw to a Minecraft server (Java Edition).
 
-This skill allows your OpenClaw AI to join a Minecraft server as a bot and play alongside you.
+**Features:**
+- 🧠 **AI Chat**: Talk to your agent in-game naturally
+- ⛏️ **Auto-Mining**: `farm stone 20`
+- 🏗️ **Building**: `build house 5`
+- ⚔️ **PvP Defense**: Auto-counterattack if hit
+- 🚶 **Follow/Goto**: Navigation commands
 
-## Features
+## 🚀 Quick Start
 
-- 🤖 AI-controlled Minecraft bot (Mineflayer)
-- 🚶 Pathfinding and navigation
-- ⛏️ Mining and block collection
-- 🏗️ Building assistance
-- ⚔️ Combat and PvP
-- 🍖 Auto-eating when hungry
-- 💬 In-game chat communication
-- 👀 Environment awareness
+1. **Install:**
+   ```bash
+   git clone https://github.com/astraopenclaw/minecraft-agent.git
+   cd minecraft-agent
+   npm install
+   ```
 
-## Requirements
+2. **Setup (Interactive):**
+   ```bash
+   npm run setup
+   ```
+   _Enter your server IP, port, and bot name._
 
-- Node.js 18+
-- Minecraft Java Edition server (1.8 - 1.20+)
-- OpenClaw running
+3. **Run:**
+   ```bash
+   npm start
+   ```
 
-## Installation
+## 💬 Commands in Game
 
-**One-liner (recommended):**
-```bash
-curl -sL https://raw.githubusercontent.com/astraopenclaw/minecraft-agent/main/install.sh | bash
+Write in Minecraft chat:
+- "Привет!" — Agent will reply (Russian/English supported)
+- "иди ко мне" / "come here"
+- "farm stone 30"
+- "build house 5"
+- "attack" (toggle PvP mode)
+
+## 🛠️ Advanced
+
+Edit `.env` manually to change settings:
+```ini
+MC_HOST=localhost
+MC_PORT=25565
+MC_USERNAME=AstraClaw
+MC_VERSION=1.16.5
 ```
 
-**Or manually:**
-```bash
-git clone https://github.com/astraopenclaw/minecraft-agent.git ~/.openclaw/skills/minecraft-agent
-cd ~/.openclaw/skills/minecraft-agent
-npm install
-```
-
-## Usage
-
-Ask your AI to join your server:
-
-> "Join my Minecraft server at localhost:25565, version 1.20.4"
-
-The AI will connect as `AstraClaw` (or configured name) and start playing!
-
-### Commands you can give:
-
-- **Movement:** "Come to me", "Go to coordinates X Y Z", "Follow me"
-- **Mining:** "Mine some stone", "Dig down", "Collect wood"
-- **Building:** "Place a block here", "Build a wall"
-- **Combat:** "Attack that zombie", "Defend yourself"
-- **Inventory:** "What do you have?", "Drop items", "Equip sword"
-- **Info:** "What do you see?", "Where are you?", "How much health?"
-
-## Configuration
-
-The bot connects dynamically. Just tell the AI:
-- Server IP/hostname
-- Port (default: 25565)
-- Minecraft version (e.g., "1.20.4")
-
-## Authors
-
-- **Astra** (AI) - AstraClaw in-game
-- **David** - Human & Project Lead
-
-## License
-
-MIT
+---
+Made with ❤️ by Astra & David
